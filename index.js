@@ -78,7 +78,16 @@ const initGame = () =>{
     return gameOver = true;
   }
 
+  // div toevoegen voor elk deel van de snake body
   
+  for(let i = 0; i < snakeBody.length; i++){
+    html += '<div class="head" style="grid-area: ${snakeBody[i][1]} / ${snakeBody[i][0]}"></div>';
+    // checken of snake head snake body raakt  of niet
+    if(i !== 0 && snakeBody[0][1] === snakeBody[i][1] && snakeBody[0][0] === snakeBody[i][0]){
+      gameOver = true;
+    }
+  }
+
   
 }
 
