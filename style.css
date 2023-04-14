@@ -15,4 +15,16 @@ body{
   background: #e3f2fd;
 }
 
+.wrapper{
+  width: 65vmin;
+  height: 70vmin;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  background: #293447;
+  border-radius: 5px;
+  box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
+}
+
 
