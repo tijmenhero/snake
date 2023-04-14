@@ -44,4 +44,6 @@ const changeDirection = e =>{
   }
 }
 
+controls.forEach(button => button.addEventListener("click", () => changeDirection({key: button.dataset.key})));
+
 
