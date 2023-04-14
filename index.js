@@ -46,4 +46,17 @@ const changeDirection = e =>{
 
 controls.forEach(button => button.addEventListener("click", () => changeDirection({key: button.dataset.key})));
 
+const initGame = () =>{
+  if(gameOver) return handleGameOver();
+  let html = '<div class="food" style="grid-area: ${foodY} / ${foodX}"></div>';
+
+  
+  if(snakeX === foodX && snakeY === foodY){
+    updateFoodPosition();
+    snakeBody.push([foodY, foodX]); //food bij snakebody optellen
+    score++;
+    highScore = score >= highScore ? score : highScore // als score groter is dan high score dan wordt de high score die score
+  }
+  
+}
 
