@@ -72,6 +72,12 @@ const initGame = () =>{
 
   snakeBody[0] = [snakeX, snakeY];
 
+  // checken of snake body buiten de muren is of niet 
+
+  if(snakeX <= 0 || snakeX > 30 || snakeY <= 0 || snakeY > 30){
+    return gameOver = true;
+  }
+
   
   
 }
