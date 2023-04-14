@@ -27,4 +27,12 @@ body{
   box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
 }
 
+.game-details{
+  color: #b8c6dc;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 20px 27px;
+  display: flex;
+  justify-content: space-between;
+}
 
