@@ -56,7 +56,17 @@ const initGame = () =>{
     snakeBody.push([foodY, foodX]); //food bij snakebody optellen
     score++;
     highScore = score >= highScore ? score : highScore // als score groter is dan high score dan wordt de high score die score
+
+    localStorage.setItem("high-score", highScore);
+    scoreElement.innerText = 'Score: ${score}';
+    highScoreElement.innerText = 'High Score: ${highScore}';
   }
+
+  // update snake head 
+  snakeX += velocityX;
+  snakeY += velocityY;
+
+  // 
   
 }
 
