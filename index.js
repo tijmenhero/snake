@@ -11,6 +11,9 @@ let snakeBody = [];
 let setIntervalId;
 let score = 0;
 
+function preload(){
+  Click = loadSound('sounds/click.mp3');
+}
 
 let highScore = localStorage.getItem("high-score") || 0;
 highScoreElement.innerText = `High Score: ${highScore}`;
@@ -32,15 +35,19 @@ const changeDirection = e => {
     if (e.key === "ArrowUp" && velocityY != 1) {
         velocityX = 0;
         velocityY = -1;
+        Click.play();
     } else if (e.key === "ArrowDown" && velocityY != -1) {
         velocityX = 0;
         velocityY = 1;
+        Click.play();
     } else if (e.key === "ArrowLeft" && velocityX != 1) {
         velocityX = -1;
         velocityY = 0;
+        Click.play();
     } else if (e.key === "ArrowRight" && velocityX != -1) {
         velocityX = 1;
         velocityY = 0;
+        Click.play();
     }
 }
 
@@ -50,6 +57,7 @@ controls.forEach(button => button.addEventListener("click", () => changeDirectio
 const initGame = () => {
     if (gameOver) return handleGameOver();
     let html = `<div class="food" style="grid-area: ${foodY} / ${foodX}"></div>`;
+
 
     // als snake food eet 
     if (snakeX === foodX && snakeY === foodY) {

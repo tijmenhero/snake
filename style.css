@@ -45,11 +45,11 @@ body{
 }
 
 .play-board .food{
-  background: #ff003d;
+  background-image: url("images/pixil-frame-0\ \(1\).png");
 }
 
 .play-board .head{
-  background: #60cbff;
+  background-image: url("images/snake.png");
 }
 
 .controls{
